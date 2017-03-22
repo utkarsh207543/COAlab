@@ -1,0 +1,26 @@
+#FIND THE SMALLEST OR LARGEST NUMBER
+
+LXI H,2001
+MVI C,05
+MVI B,00
+MVI D,00
+
+MVI M,05
+INX H
+MVI M,10
+INX H
+MVI M,15
+INX H
+MVI M,20
+INX H
+MVI M,25
+LXI H,2001
+LOOP:
+           LDA M
+           CMP B
+
+           INX H
+           DCR C
+           JNZ LOOP
+
+HLT  
